@@ -1,0 +1,56 @@
+.UserAccountParentCon {
+    background-color: #121212;
+}
+
+.userCon {
+    min-width: 60vw;
+    min-height: 60vh;
+    background-color: #1A1A1A;
+    position: relative;
+}
+
+.mainAccountCon {
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    /* background-color: rgba(151, 255, 255, 0.5); */
+    width: 60%;
+    height: 60%;
+}
+
+.passwordImage {
+    height: 100px;
+}
+
+.setqr:hover,
+.resetPassword:hover {
+    cursor: pointer;
+}
+
+.qrDialogCon {
+    width: 50vh;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.qrImage {
+    height: 250px;
+    width: 250px;
+}
+
+.backArrow {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.avatarCon {
+    position: relative;
+}
+
+.camIcon {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+.uploadEle{
+    cursor: pointer;
+}

@@ -1,0 +1,43 @@
+.joinSeller,
+.schemCon,
+.believeUs {
+    background-color: #F0FFFF;
+}
+
+.chrono-container {
+    width: 60vw;
+    /* width: 60vw; */
+    /* height: 90vh; */
+}
+
+/* if you want to make the chrono fixed for limited dimensions then comment 60vw and uncomment else. */
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+
+@media screen and (min-width:767px) {
+    .HomeParentCon {
+        min-height: 150vh;
+        width: 96%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .HomeParentCon {
+        min-height: 100vh;
+        width: 95%;
+
+    }
+
+    .chrono-container {
+        width: 95vw;
+        height: 90vh;
+    }
+
+    .HomeParentCon::-webkit-scrollbar {
+        display: none;
+    }
+}

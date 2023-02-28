@@ -1,0 +1,41 @@
+.fair_price_container {
+  min-height: 100vh;
+  display: flex;
+  width: 95%;
+}
+
+.left_side_bar {
+  /* background-color: #e0eeee; */
+  /* background-color: #e0f7fa; */
+  background-color: #eceff1;
+}
+
+.activeColor {
+  background-color: aqua;
+}
+
+.fairPrice_products_Container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fair_price_card {
+  /* background-color: #ffffff; */
+  border-radius: 10px;
+  border: 1px solid #b7bdba;
+  background-color: #dff5f7;
+}
+
+.image_Container {
+  height: 225px;
+}
+
+.fairPriceFilterButtons {
+  all: unset;
+}
+
+.fairPriceFilterButtons:focus {
+  all: unset;
+}
+
+.rightsideColor {}

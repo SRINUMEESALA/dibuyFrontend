@@ -1,0 +1,54 @@
+.productsCon,
+.summaryCon {
+    background-color: #F0FFFF;
+}
+
+
+.quantity {
+    width: 80px;
+    height: 25px;
+}
+
+.pill {
+    background-color: #E8E8E8;
+}
+
+.productCartImage {
+    height: 70px;
+    width: 70px;
+}
+
+.addressform {
+    height: 50vh;
+}
+
+@media screen and (max-width:767px) {
+    .productCartImage {
+        height: 50px;
+        width: 50px;
+    }
+
+    .cartCon {
+        width: 92%;
+    }
+
+    .productsCon {
+        height: 80vh;
+    }
+
+    .summaryConB {
+        height: 20vh;
+    }
+}
+
+
+@media screen and (min-width:767px) {
+    .productsCon {
+        height: 100%;
+    }
+
+    .cartCon {
+        width: 92%;
+        height: 90vh;
+    }
+}

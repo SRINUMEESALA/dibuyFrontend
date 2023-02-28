@@ -1,0 +1,11 @@
+.stepperCon {
+    width: 70vw;
+    height: 70vh;
+    /* background-color: #CCFFCC; */
+    background-image: linear-gradient(to top left, #FBEC5D, white);
+}
+
+.registerSellerParentCon {
+    background-color: #1A1A1A;
+    background-image: linear-gradient(to top left, #CCFFCC, #97FFFF);
+}

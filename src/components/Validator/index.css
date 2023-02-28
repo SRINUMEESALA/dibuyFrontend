@@ -1,0 +1,8 @@
+.secImage {
+    height: 60vh;
+    background-image: linear-gradient(to right, white 45%, black);
+}
+
+.colorSuccess {
+    color: #eeff41;
+}

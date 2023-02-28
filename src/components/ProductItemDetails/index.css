@@ -1,0 +1,42 @@
+.itemParentCon {
+  width: 90%;
+}
+
+.imagepord {
+  height: 75vh;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.starimg {
+  height: 20px;
+}
+
+.buttonPlus {
+  outline: none;
+  border-style: none;
+  background-color: none;
+}
+
+.buttonPlus:focus {
+  outline: none;
+}
+
+.sizeFailure {
+  height: 200px;
+  width: 300px;
+}
+
+.failview {
+  flex-grow: 1;
+}
+
+.loader {
+  height: 80vh;
+}
+
+.simalarProductsCon {
+  background-color: #bbdefb;
+  margin-top: 90px;
+
+}

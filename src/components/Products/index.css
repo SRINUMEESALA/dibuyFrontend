@@ -1,0 +1,71 @@
+.customerPrototypeCon {
+    background-color: #E5E5E5;
+}
+
+.productsCon {
+    width: 96%;
+    height: 92vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.filterSectionCon {
+    width: 15%;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+
+
+.filterItem {
+    font-size: 15px;
+}
+
+.filterSectionCon::-webkit-scrollbar {
+    display: none;
+}
+
+.filterSectionCon label {
+    cursor: pointer;
+}
+
+.colorSearchIconCon {
+    width: 10%;
+}
+
+.searchInputCon {
+    flex-grow: 1;
+}
+
+.filterHeading {
+    color: #3F4156;
+}
+
+.productImageCon {
+    width: 150px;
+    height: 180px;
+}
+
+.categoryReviews {
+    text-decoration: underline;
+}
+
+.sizeFailure {
+    width: 60vw;
+    height: 60vh;
+}
+
+.emptyConView {
+    flex-grow: 1;
+}
+
+@media screen and (min-width:768px) {
+    .productCardsCon {
+        width: 82%;
+        background-color: white;
+        border-radius: 10px;
+        height: 100%;
+        position: relative;
+    }
+}

@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+.videosSliderParentCon {
+    width: 100%;
+    position: relative;
+}
+
+.slick-slide>div {
+    margin: 0 7px;
+}
+
+.cardImage {
+    height: 40vh;
+}
+
+.slick-list {
+    margin: 0px -10px;
+}
+
+.slick-slider {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nextBtn {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    z-index: 1;
+    background-color: transparent;
+    padding: 0px;
+    outline: none;
+    border-style: none;
+}
+
+.nextBtn:focus {
+    background-color: transparent;
+    padding: 0px;
+    outline: none;
+    border-style: none;
+}
+
+.prevBtn {
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    z-index: 1;
+    background-color: transparent;
+    padding: 0px;
+    outline: none;
+    border-style: none;
+}
+
+.prevBtn:focus {
+    background-color: transparent;
+    padding: 0px;
+    outline: none;
+    border-style: none;
+}
+
+@media (max-width: 767px) {
+    .prevBtn {
+        left: -15px;
+    }
+
+    .nextBtn {
+        right: -15px;
+    }
+}
+
+.card {
+    height: 50vh;
+}
+
+.eachProductCard:hover {
+    border-color: #FF5454;
+}

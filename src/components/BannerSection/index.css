@@ -1,0 +1,32 @@
+.videosSliderParentCon {
+    width: 100%;
+    position: relative;
+}
+
+.sliderimage {
+    height: 70vh;
+}
+
+.slick-slide>div {
+    margin: 0 7px;
+}
+
+.slick-list {
+    margin: 0px -10px;
+}
+
+.slick-slider {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+@media (max-width: 767px) {
+    .prevBtn {
+        left: -15px;
+    }
+
+    .nextBtn {
+        right: -15px;
+    }
+}

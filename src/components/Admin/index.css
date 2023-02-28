@@ -1,0 +1,121 @@
+.adminCon {
+    background-color: white;
+}
+
+.introCon {
+    background-image: url("https://img.freepik.com/premium-vector/data-center-cloud-storage-programmers-tiny-people-ensure-efficient-operation-data-center_143808-246.jpg?w=2048");
+    background-size: 55vw;
+    height: 100vh;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.contentCon {
+    width: 94vw;
+}
+
+.adminHead {
+    font-size: 60px;
+    color: #ec407a;
+}
+
+.productsAdminCon {
+    background-color: #212121;
+    min-height: 100vh;
+}
+
+.tableHead {
+    position: sticky;
+    top: 0px;
+    background-color: #7A7A7A;
+}
+
+.tableHead li {
+    color: #ffd600;
+    font-size: 18px;
+
+}
+
+.tableRowColor {
+    background-color: #4D4D4D;
+
+}
+
+.tableRow li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tableCon {
+    height: 84vh;
+    border-radius: 25px;
+    width: 80%;
+    position: relative;
+}
+
+.logoutCon button {
+    width: 200px;
+}
+
+.adButton {
+    width: 150px;
+}
+
+/* for animation */
+.container {
+    display: inline-block;
+}
+
+.animationTyping {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    /*  typing 2s steps(20, end) forwards; */
+    /* typing 1s steps(20, end) forwards; */
+    font-size: 1.6rem;
+    width: 0;
+}
+
+.typeOut {
+    animation:
+        typing 1s forwards;
+    /*   blink .5s infinite; */
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+.typeIn {
+    animation:
+        revTyping 1s forwards;
+    /* blink .5s infinite; */
+}
+
+@keyframes revTyping {
+    from {
+        width: 100%
+    }
+
+    to {
+        width: 0%
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent
+    }
+
+    to {
+        border-color: orange;
+    }
+}
