@@ -13,7 +13,7 @@ const ProductItem = (props) => {
         <li className="col-md-3 col-12  p-2 productCard">
             <Link to={`/product/${_id}`} className="link">
                 <div className="card d-flex flex-column p-3 desingItemCardParentCon">
-                    <div className="mb-2 bg-info ">
+                    <div className="mb-2 ">
                         <img src={imageUrl} alt="productImage" className="productImage rounded" />
                     </div>
                     <div className="cardDetailsCon">
