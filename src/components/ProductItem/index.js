@@ -17,7 +17,7 @@ const ProductItem = (props) => {
                         <img src={imageUrl} alt="productImage" className="productImage rounded" />
                     </div>
                     <div className="cardDetailsCon">
-                        <h5 className='productHeading'>{title}</h5>
+                        <h5 className='productHeading'>{`${title.slice(0, 18)}${title.length >= 18 && ".."}`}</h5>
                         <div className="d-flex justify-content-between mt-3 mb-2">
                             <p className="m-0 small">Price :</p>
                             <p className="filterHeading m-0 storeName h6">{`Rs. ${price}`}</p>
