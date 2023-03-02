@@ -223,7 +223,7 @@ export default function SellerRegistration(props) {
                     if (isStepFailed(index)) {
                         labelProps.optional = (
                             <Typography variant="caption" color="error">
-                                Invalid Enteries
+                                Invalid Entries
                             </Typography>
                         );
                         labelProps.error = true;
