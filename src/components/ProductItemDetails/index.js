@@ -192,7 +192,7 @@ class ProductItemDetails extends Component {
                                 </div>
                                 <p className="m-1"></p>
                                 <p>
-                                    <span className="font-weight-bold">Brand: </span>
+                                    <span className="font-weight-bold">Product Name: </span>
                                     {title}
                                 </p>
                                 <p>
