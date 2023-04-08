@@ -1,35 +1,66 @@
-.desingItemCardParentCon {
-    position: relative;
+.loginParentCon {
+    background-color: #58243D;
+    height: 100vh;
 }
 
-/* .desingItemCardParentCon {
-    height: 60vh;
-} */
 
-.storeName {
-    font-size: 15px;
+
+.WebHeading {
+    color: #58243D;
 }
 
-.link {
-    all: unset;
+.newUser {
+    color: #58243D;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
-.link:hover {
-    all: unset;
+.rightArrowImage {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.leftArrowImg {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+.websiteLogo {}
+
+.loginHeading {
+    color: #58243D;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.termsConds {
     cursor: pointer;
 }
 
-.productHeading {
-    color: #171f46;
+@media screen and (max-width:767px) {
+    .cardConLoginSeller {
+        min-height: 60vh;
+        width: 80%;
+    }
+
+    .rightArrowImage {
+        z-index: -1;
+    }
+
+    .leftArrowImg {
+        z-index: -1;
+    }
 }
 
-.productImageCon {}
-
-.productImage {
-    width: 100%;
-    height: 25vh;
+@media screen and (min-width:768px) {
+    .cardConLoginSeller {
+        min-height: 65vh;
+        width: 30%;
+    }
 }
-
-/* .cardDetailsCon {
-    height: 35vh;
-} */
