@@ -250,7 +250,10 @@ const UserLogin = (props) => {
         <>
           <Alert
             severity="error"
-            onClose={() => setIsSubmitClicked(false)}
+            onClose={() => {
+              setIsSubmitClicked(false);
+              setShowError(false);
+            }}
             className="mb-2">
             <AlertTitle>Entered OTP is Mismatched!</AlertTitle>
             Please check the OTP again.
