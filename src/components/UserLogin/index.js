@@ -32,7 +32,8 @@ const UserLogin = (props) => {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [sentOtp, setSentOtp] = useState(false);
   const [otp, setOtp] = useState("");
-  const [isValidOtp, setIsValidOtp] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const [loadingBar, setloadingBar] = useState(false);
   const [isSubmitClicked, setIsSubmitClicked] = useState(false);
   const [open, setOpen] = useState(false);
   const [snackBarOpen, setSnackBarOpen] = useState(false);
@@ -78,13 +79,15 @@ const UserLogin = (props) => {
     if (response.ok) {
       const jwtToken = data.jwt_Token;
       Cookies.set("jwtToken", jwtToken, { expires: 30 });
-      setIsValidOtp(true);
+      setShowError(false);
+      setloadingBar(true);
       setTimeout(() => {
         const { history } = props;
         history.replace("/");
       }, 3000);
     } else {
-      setIsValidOtp(false);
+      setShowError(true);
+      setloadingBar(false);
     }
   };
 
@@ -242,7 +245,7 @@ const UserLogin = (props) => {
   );
 
   const showMsg = () => {
-    if (!isValidOtp) {
+    if (showError) {
       return (
         <>
           <Alert
@@ -298,7 +301,7 @@ const UserLogin = (props) => {
   const renderMobileVerificationScreen = () => (
     <div className="card-body d-flex flex-column pb mt-2 justify-content-around">
       <div>
-        {isSubmitClicked && showMsg()}
+        {showError && showMsg()}
         <h1 className="h5 loginHeading mb-2">Verify Email</h1>
         <p className="mt-0">Code sent to - {email}</p>
 
@@ -337,7 +340,7 @@ const UserLogin = (props) => {
           className="w-100 mt-3"
           style={{ backgroundColor: "#58243D" }}
           onClick={onClickSignIn}>
-          {isValidOtp ? <CircularProgress color="primary" /> : "Sign In"}
+          {loadingBar ? <CircularProgress color="primary" /> : "Sign In"}
         </Button>
       </div>
       {snackBar()}
@@ -347,7 +350,7 @@ const UserLogin = (props) => {
   return (
     <div className="loginParentCon d-flex justify-content-center align-items-center">
       <div className="card  text-secondary cardConLoginSeller">
-        {isValidOtp && <LinearProgress sx={{ width: "100%" }} />}
+        {loadingBar && <LinearProgress sx={{ width: "100%" }} />}
         <div className="card-header text-center p-3">
           <h1 className="h2 WebHeading">DiBuy</h1>
         </div>

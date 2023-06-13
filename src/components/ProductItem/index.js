@@ -8,6 +8,7 @@ import "./index.css";
 const ProductItem = (props) => {
   const { eachProduct } = props;
   const { title, imageUrl, price, _id, category, quality } = eachProduct;
+
   return (
     <li className="col-md-3 col-12  p-2 productCard">
       <Link to={`/product/${_id}`} className="link">
@@ -39,8 +40,9 @@ const ProductItem = (props) => {
                 <p className="m-0 small">Quality</p>
                 <Rating
                   name="read-only"
-                  value={quality}
+                  value={parseFloat(quality)}
                   readOnly
+                  precision={0.1}
                   size="small"
                 />
               </div>
