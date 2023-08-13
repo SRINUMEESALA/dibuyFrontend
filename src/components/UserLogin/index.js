@@ -60,7 +60,7 @@ const UserLogin = (props) => {
     setSnackBarOpen(true);
     const response = await fetch(`${serverUrl}/user/sendotp`, options);
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
   };
 
   const verifyOtp = async (value) => {

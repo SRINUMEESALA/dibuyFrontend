@@ -3,22 +3,24 @@ import { Redirect, Route } from "react-router-dom";
 import DiBuyContext from "../../context/DiBuyContext";
 import { useEffect } from "react";
 const ProtectedRoute = (props) => {
-  useEffect(() => {
-    <DiBuyContext.Consumer>
-      {(value) => {
-        const { currentRoute, setCurrentRoute } = value;
-        if (props.path !== currentRoute) {
-          setCurrentRoute(props.path);
-        }
-      }}
-    </DiBuyContext.Consumer>;
-  }, []);
-
   if (Cookies.get("jwtToken") === undefined) {
     return <Redirect to="/user/login" />;
   }
 
-  return <Route {...props} />;
+  return (
+    <>
+      <DiBuyContext.Consumer>
+        {(value) => {
+          const { currentRoute, setCurrentRoute } = value;
+          // console.log("currentRoute", currentRoute);
+          if (props.path !== currentRoute) {
+            setCurrentRoute(props.path);
+          }
+          return <Route {...props} />;
+        }}
+      </DiBuyContext.Consumer>
+    </>
+  );
 };
 
 export default ProtectedRoute;

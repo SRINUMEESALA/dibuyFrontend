@@ -1,10 +1,10 @@
 const Temp = () => {
-    console.log()
-    return (
-        <div className="">
-            <h1>RadheRadhe</h1>
-        </div>
-    )
-}
+  // console.log()
+  return (
+    <div className="">
+      <h1>RadheRadhe</h1>
+    </div>
+  );
+};
 
-export default Temp
+export default Temp;
