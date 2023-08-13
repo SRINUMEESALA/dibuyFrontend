@@ -41,6 +41,7 @@ const Cart = (props) => {
       };
       const response = await fetch(url, options);
       const result = await response.json();
+
       // console.log(result)
     } catch (err) {
       console.log("Could raise HTTP in emptyCartAfterOrderPlaced", err);
@@ -50,18 +51,8 @@ const Cart = (props) => {
   if (orderSuccess) {
     setTimeout(() => {
       emptyCartAfterOrderPlaced();
-      getCartProducts();
-      setProducts([{}]);
+      setProducts([]);
       setOrderSuccess(false);
-      return (
-        <DiBuyContext.Consumer>
-          {(value) => {
-            const { setCartCount } = value;
-            setCartCount(0);
-            return <></>;
-          }}
-        </DiBuyContext.Consumer>
-      );
     }, 3000);
   }
 
@@ -153,13 +144,6 @@ const Cart = (props) => {
   const renderCartProducts = () => (
     <DiBuyContext.Consumer>
       {(value) => {
-        const { cartCount, setCartCount } = value;
-        if (products.length !== cartCount) {
-          setCartCount(products.length);
-        }
-        if (products.length === 1 && products[0].cart === undefined) {
-          setCartCount(0);
-        }
         return (
           <div className="cartParentCon">
             <Header />
@@ -384,10 +368,10 @@ const Cart = (props) => {
   );
 
   const renderSuccessView = () => {
-    if (products.length === 0) {
-      return renderEmptyView();
-    } else {
+    if (products.length !== 0) {
       return renderCartProducts();
+    } else {
+      return renderEmptyView();
     }
   };
 
