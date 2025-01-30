@@ -25,7 +25,8 @@ import { useState } from "react";
 
 // For MUI styles
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
-
+const secretDataEnv = process.env.REACT_APP_API_KEY;
+console.log("apiKey", process.env.REACT_APP_API_KEY);
 const UserLogin = (props) => {
   const [email, setEmail] = useState("");
   const [isTermsAgreed, setIsTermsAgreed] = useState(true);
@@ -147,7 +148,8 @@ const UserLogin = (props) => {
     <Dialog
       open={open}
       onClose={handleCloseTermsConds}
-      aria-labelledby="draggable-dialog-title">
+      aria-labelledby="draggable-dialog-title"
+    >
       <DialogTitle style={{ cursor: "move" }} id="draggable-dialog-title">
         DiBuy
       </DialogTitle>
@@ -234,7 +236,8 @@ const UserLogin = (props) => {
           variant="contained"
           className="w-100 mt-3"
           style={{ backgroundColor: "#58243D" }}
-          onClick={onClickGetOtp}>
+          onClick={onClickGetOtp}
+        >
           Get OTP
         </Button>
         <p className="small text-center mt-2 newUser">
@@ -254,7 +257,8 @@ const UserLogin = (props) => {
               setIsSubmitClicked(false);
               setShowError(false);
             }}
-            className="mb-2">
+            className="mb-2"
+          >
             <AlertTitle>Entered OTP is Mismatched!</AlertTitle>
             Please check the OTP again.
           </Alert>
@@ -281,7 +285,8 @@ const UserLogin = (props) => {
         size="small"
         aria-label="close"
         color="inherit"
-        onClick={handleCloseSnack}>
+        onClick={handleCloseSnack}
+      >
         <CloseIcon fontSize="small" />
       </IconButton>
     </>
@@ -294,7 +299,8 @@ const UserLogin = (props) => {
       onClose={handleCloseSnack}
       action={action}
       anchorOrigin={{ vertical: "top", horizontal: "center" }}
-      TransitionComponent={Slide}>
+      TransitionComponent={Slide}
+    >
       <Alert severity="success" sx={{ width: "30vw" }} className="text-center">
         OTP Sent Successfully!
       </Alert>
@@ -329,7 +335,8 @@ const UserLogin = (props) => {
         <p
           href="www.printila.com"
           className="small m-0 text-right text-primary termsConds"
-          onClick={sendOtp}>
+          onClick={sendOtp}
+        >
           Request again
         </p>
       </div>
@@ -342,7 +349,8 @@ const UserLogin = (props) => {
           variant="contained"
           className="w-100 mt-3"
           style={{ backgroundColor: "#58243D" }}
-          onClick={onClickSignIn}>
+          onClick={onClickSignIn}
+        >
           {loadingBar ? <CircularProgress color="primary" /> : "Sign In"}
         </Button>
       </div>
